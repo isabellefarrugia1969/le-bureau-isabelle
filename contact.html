@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact — Le Bureau d'Isabelle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <a href="index.html" class="brand">
+<img src="assets/illustration.png" alt="Logo Le Bureau d’Isabelle" class="logo-img">
+        <strong>Le Bureau d’Isabelle</strong>
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Accueil</a>
+        <a href="services.html">Prestations</a>
+        <a href="about.html">À propos</a>
+        <a href="avantages.html">Avantages</a>
+        <a href="tarifs.html">Tarifs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="section-title">Contact</h1>
+      <section class="card">
+        <p>Pour un devis, une question ou une urgence chantier, contactez-moi :</p>
+        <p><strong>Téléphone :</strong> <a href="tel:+33664399003">06 64 39 90 03</a></p>
+        <p><strong>Email :</strong> <a href="mailto:isabelle.farrugia@laposte.net">isabelle.farrugia@laposte.net</a></p>
+        <p><strong>Adresse :</strong> 85 670 Saint Christophe du Ligneron</p>
+        <p><strong>SIRET :</strong> 995 074 861 00015</p>
+
+        <hr style="margin:12px 0">
+
+        <form id="contactForm" action="mailto:isabelle.farrugia@laposte.net" method="post" enctype="text/plain" onsubmit="alert('Le formulaire ouvrira votre client mail.');">
+          <label>Nom<br><input type="text" name="Nom" style="width:100%;padding:8px;margin-top:6px" required></label><br><br>
+          <label>Email<br><input type="email" name="Email" style="width:100%;padding:8px;margin-top:6px" required></label><br><br>
+          <label>Message<br><textarea name="Message" rows="6" style="width:100%;padding:8px;margin-top:6px" required></textarea></label><br><br>
+          <button class="btn" type="submit">Envoyer</button>
+        </form>
+
+        <p class="humour" style="margin-top:12px">(Si ton navigateur n'ouvre pas la messagerie, je peux t'envoyer un formulaire hébergé.)</p>
+      </section>
+    </main>
+
+    <footer>
+      © Le Bureau d'Isabelle — Secrétaire indépendante BTP • SIRET : 995 074 861 00015
+    </footer>
+  </div>
+</body>
+</html>

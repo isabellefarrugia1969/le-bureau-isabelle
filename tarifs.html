@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarifs — Le Bureau d’Isabelle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html" class="brand">
+      <img src="assets/illustration.png" alt="Logo Le Bureau d’Isabelle" class="logo-img">
+      <strong>Le Bureau d’Isabelle</strong>
+    </a>
+
+    <nav class="site-nav">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Prestations</a>
+      <a href="about.html">À propos</a>
+      <a href="avantages.html">Avantages</a>
+      <a href="tarifs.html" class="active">Tarifs</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="tarifs">
+
+    <h1 class="section-title">Mes Tarifs</h1>
+
+    <section class="card">
+      <p><em>« Chaque client est unique, chaque prestation est unique. »</em></p>
+
+      <p>
+        C’est pour cette raison qu’il est indispensable, en tout premier lieu,
+        de discuter de vos besoins réels afin de vous établir un devis au plus juste
+        et déterminer ensemble la solution la mieux adaptée.
+      </p>
+    </section>
+
+    <!-- TOGGLE TARIFS -->
+    <section class="tarifs-toggle">
+
+      <div class="tarifs-buttons">
+        <button id="btn-sans" class="active">Sans forfait</button>
+        <button id="btn-avec">Avec forfait</button>
+      </div>
+
+      <!-- SANS FORFAIT -->
+      <div id="content-sans" class="tarifs-content active">
+
+        <h2 class="section-title">Facturation à la carte</h2>
+
+        <ul class="check-list">
+          <li>Aucun engagement sur un volume horaire</li>
+          <li>Tarif dégressif selon le volume</li>
+          <li>Facturation en fin de mois avec relevé détaillé</li>
+        </ul>
+
+        <div class="card">
+          <h3>0 à 9 heures / mois</h3>
+          <p>50 € / heure</p>
+        </div>
+
+        <div class="card">
+          <h3>10 à 19 heures / mois</h3>
+          <p>45 € / heure</p>
+        </div>
+
+        <div class="card">
+          <h3>20 à 29 heures / mois</h3>
+          <p>40 € / heure</p>
+        </div>
+
+      </div>
+
+      <!-- AVEC FORFAIT -->
+      <div id="content-avec" class="tarifs-content">
+
+        <h2 class="section-title">Forfaits mensuels</h2>
+
+        <ul class="check-list">
+          <li>Volume horaire défini à l’avance</li>
+          <li>Facturation en début de mois</li>
+          <li>Forfait ajustable le mois suivant</li>
+        </ul>
+
+        <div class="card">
+          <h3>Forfait Serein</h3>
+          <p>10 heures / mois (≈ 2 h / semaine)</p>
+          <p><strong>450 € / mois</strong> — soit 45 € / heure</p>
+        </div>
+
+        <div class="card">
+          <h3>Forfait Quiétude</h3>
+          <p>20 heures / mois (≈ 4 h / semaine)</p>
+          <p><strong>800 € / mois</strong> — soit 40 € / heure</p>
+        </div>
+
+        <div class="card">
+          <h3>Forfait Zen</h3>
+          <p>30 heures / mois (≈ 6 h / semaine)</p>
+          <p><strong>1 050 € / mois</strong> — soit 35 € / heure</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- CTA -->
+   <p class="humour">
+  L’administratif, c’est mon métier. Le vôtre, c’est le terrain.
+</p>
+
+ <div class="cta">
+      <a class="btn" href="contact.html">Me contacter pour un devis</a>
+    </div>
+
+    <p class="note">
+      Les tarifs ne sont pas assujettis à la TVA (article 293B du CGI).
+    </p>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © Le Bureau d’Isabelle — Secrétaire indépendante BTP • SIRET : 995 074 861 00015
+  </footer>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+  const btnSans = document.getElementById("btn-sans");
+  const btnAvec = document.getElementById("btn-avec");
+  const contentSans = document.getElementById("content-sans");
+  const contentAvec = document.getElementById("content-avec");
+
+  if (btnSans && btnAvec && contentSans && contentAvec) {
+
+    btnSans.addEventListener("click", () => {
+      btnSans.classList.add("active");
+      btnAvec.classList.remove("active");
+
+      contentSans.classList.add("active");
+      contentAvec.classList.remove("active");
+    });
+
+    btnAvec.addEventListener("click", () => {
+      btnAvec.classList.add("active");
+      btnSans.classList.remove("active");
+
+      contentAvec.classList.add("active");
+      contentSans.classList.remove("active");
+    });
+
+  }
+</script>
+
+
+
+</body>
+</html>
