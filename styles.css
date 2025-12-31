@@ -1,0 +1,358 @@
+/* =========================
+   RESET DE BASE
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   VARIABLES DE COULEURS
+========================= */
+:root {
+  --principal: #2f2f2f;
+  --accent: #5f7c8a;       /* bleu/gris pro */
+  --fond-clair: #fafafa;
+  --fond-page: #f4f4f4;
+  --texte-secondaire: #555;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #e9eef1 0%, #f4f6f7 100%);
+  color: var(--principal);
+  line-height: 1.6;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--principal);
+}
+
+.logo-img {
+  width: 140px;
+  height: auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+.site-nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--principal);
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+}
+
+/* =========================
+   HERO (ACCUEIL)
+========================= */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Illustration principale */
+.hero-img {
+  flex: 1;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================
+   BOUTON
+========================= */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #4a6571;
+}
+
+/* =========================
+   CARTES / SECTIONS
+========================= */
+.card {
+   background: #f7f9fa;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--accent);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   LISTES
+========================= */
+ul {
+  list-style-position: inside;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+ul.compact li {
+  margin-bottom: 5px;
+}
+
+/* =========================
+   LISTE AVEC ICÔNES SVG
+========================= */
+.icon-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  fill: var(--accent);
+  flex-shrink: 0;
+}
+
+/* =========================
+   MICRO-TOUCHE D'HUMOUR
+========================= */
+.humour {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-left: 12px;
+  border-left: 3px solid var(--accent);
+  font-style: italic;
+  color: var(--texte-secondaire);
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .site-nav a {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img {
+    max-width: 280px;
+  }
+
+  .logo-img {
+    width: 50px;
+  }
+}
+/* =========================
+   PAGE À PROPOS – PHOTO
+========================= */
+.about {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.about-photo {
+  width: 260px;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.about-text {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-photo {
+    width: 150px;
+  }
+}
+/* =========================
+   TARIFS – Boutons Forfait
+   ========================= */
+
+.tarifs-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tarifs-buttons button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.tarifs-buttons button.active {
+  background: #000;
+  color: #fff;
+}
+
+.tarifs-content .content {
+  display: none;
+}
+
+.tarifs-content.active {
+  display: block;
+}
+h1 {
+  color: var(--accent);
+}
+
+.card h2,
+main h2 {
+  color: var(--accent);
+  position: relative;
+  padding-left: 10px;
+}
+
+/* Petit trait visuel discret */
+.card h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 4px;
+  height: 70%;
+  background: var(--accent);
+}
+/* =========================
+   TARIFS – AÉRATION AVANT BOUTONS
+========================= */
+.tarifs-toggle + p .btn,
+main .btn {
+  margin-top: 35px;
+  display: inline-block;
+}
+.cta {
+  margin-top: 40px;
+  text-align: left;
+}
+.section-title {
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+.check-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.check-list li {
+  padding-left: 26px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+/* =========================
+   TARIFS – TOGGLE PROPRE
+========================= */
+.tarifs-content {
+  display: none;
+}
+
+.tarifs-content.active {
+  display: block;
+}
